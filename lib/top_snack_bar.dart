@@ -180,7 +180,7 @@ class _TopSnackBarState extends State<_TopSnackBar> with SingleTickerProviderSta
 
     widget.onAnimationControllerInit?.call(_animationController);
 
-    switch(widget.snackBarPosition) {
+    switch (widget.snackBarPosition) {
       case SnackBarPosition.top:
         _offsetTween = Tween<Offset>(begin: const Offset(0, -1), end: Offset.zero);
         break;
@@ -211,10 +211,12 @@ class _TopSnackBarState extends State<_TopSnackBar> with SingleTickerProviderSta
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
+
     return Positioned(
       top: widget.snackBarPosition == SnackBarPosition.top ? widget.padding.top : null,
       bottom: widget.snackBarPosition == SnackBarPosition.bottom ? widget.padding.bottom : null,
-      left: widget.padding.left,
+      left: screenWidth > 800 ? screenWidth * .6 : widget.padding.left,
       right: widget.padding.right,
       child: SlideTransition(
         position: _offsetAnimation,
