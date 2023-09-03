@@ -1,7 +1,3 @@
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
-
-Made in [lanars.com](https://lanars.com).
-
 [![pub package](https://img.shields.io/pub/v/top_snackbar_flutter.svg)](https://pub.dev/packages/top_snackbar_flutter)
 
 If you need to show the user some information in a nice way, you can use this package. The API is as simple
